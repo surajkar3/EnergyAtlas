@@ -1,0 +1,6 @@
+node_modules
+dist
+.vscode
+.DS_Store
+public/data/energy.csv
+public/data/energy_compact.json
