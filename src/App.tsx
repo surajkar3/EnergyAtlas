@@ -25,9 +25,12 @@ export default function App() {
   const [compareIso, setCompareIso] = useState<string | null>(null);
 
   useEffect(() => {
+    const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
+      ? import.meta.env.BASE_URL 
+      : `${import.meta.env.BASE_URL}/`;
     Promise.all([
-      fetch("/data/energy_compact.json").then((r) => r.json()),
-      fetch("/data/countries.geojson").then((r) => r.json())
+      fetch(`${baseUrl}data/energy_compact.json`).then((r) => r.json()),
+      fetch(`${baseUrl}data/countries.geojson`).then((r) => r.json())
     ]).then(([energy, countries]) => {
       setCompact(energy);
       setGeojson(countries);

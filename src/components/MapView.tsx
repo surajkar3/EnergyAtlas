@@ -88,7 +88,7 @@ export default function MapView({
               weight: isSelected ? 2 : 0.7,
               color: isSelected ? "#111827" : "#374151",
               fillOpacity: 0.85,
-              fillColor: color(typeof v === "number" ? v : null)
+              fillColor: color(typeof v === "number" ? v : null) as string
             };
           }}
           onEachFeature={(feature, layer) => {

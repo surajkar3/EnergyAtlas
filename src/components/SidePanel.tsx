@@ -129,14 +129,14 @@ export default function SidePanel({ compact, selectedIso, compareIso, year, metr
               dot={false} 
             />
             {compareIso && (
-              <Line 
-                type="monotone" 
-                dataKey="metricB" 
-                name={compareName}
-                stroke="#ef4444" 
-                strokeWidth={2}
-                dot={false} 
-              />
+            <Line 
+              type="monotone" 
+              dataKey="metricB" 
+              name={compareName ?? undefined}
+              stroke="#ef4444" 
+              strokeWidth={2}
+              dot={false} 
+            />
             )}
           </LineChart>
         </ResponsiveContainer>
@@ -162,14 +162,14 @@ export default function SidePanel({ compact, selectedIso, compareIso, year, metr
               dot={false} 
             />
             {compareIso && (
-              <Line 
-                type="monotone" 
-                dataKey="nuclear_shareB" 
-                name={compareName}
-                stroke="#ef4444" 
-                strokeWidth={2}
-                dot={false} 
-              />
+            <Line 
+              type="monotone" 
+              dataKey="nuclear_shareB" 
+              name={compareName ?? undefined}
+              stroke="#ef4444" 
+              strokeWidth={2}
+              dot={false} 
+            />
             )}
           </LineChart>
         </ResponsiveContainer>
