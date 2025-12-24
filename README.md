@@ -34,21 +34,3 @@ This creates:
 ```bash
 npm run dev
 ```
-
-Open the URL printed by Vite.
-
-## Troubleshooting
-
-### Map is mostly gray
-- Your `countries.geojson` ISO3 property may not match what the app expects.
-  Update `candidates` in:
-  `src/components/MapView.tsx`
-
-### A country shows no data
-- Some ISO codes in the Kaggle dataset are aggregates (e.g., OWID_*), which won't match polygons.
-- Some years may be missing for some countries—this is normal.
-
-## What to customize next (quick wins)
-- Add a second dropdown for "Compare country B" and plot both lines.
-- Add annotations for notable nuclear milestones by country (manual curation).
-
